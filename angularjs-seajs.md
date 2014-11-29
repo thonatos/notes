@@ -1,6 +1,4 @@
 
-### Basic Knowledge
-
 As we start this post, we may still heve to know something about ng(AngularJs) and seajs, SeaJs - A Module Loader for the Web, ng(AngularJs) is a MVVM(Model View ViewModel) framework:
 
 

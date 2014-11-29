@@ -1,5 +1,3 @@
-### Basic Knowledge
-
 As we start this post, we may already know something about ng(AngularJs) like :
 
 * ng-app

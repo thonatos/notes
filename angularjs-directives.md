@@ -1,5 +1,3 @@
-### categories : angularjs
-
 AngularJS(ng) lets you extend HTML with new attributes called Directives. --W3Schools.
 
 ng用来扩展HTML的属性即指令，通过ng的指令，我们能够对HTML进行扩展，ng自带了一些指令，例如：
