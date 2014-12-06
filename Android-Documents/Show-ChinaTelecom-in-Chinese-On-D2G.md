@@ -6,9 +6,7 @@
 
 #### 准备工作：
 
-一，安装java环境，这里我就不多说了，如果有需要的，也可以去我博客看看，或者去百度一下。
-
-	http://www.thonatos.com/blog/learn-document/2176.html
+一，安装java环境，这里我就不多说了，去百度一下。
 
 二，下载工具包，android-apktool
 
