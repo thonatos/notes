@@ -118,47 +118,47 @@ vjs直接忽略了，不知道他们怎么弄的，直接没法支持hls的播�
         <th align="left" width="50%">描述</th>
     </tr>
     <tr>
-        <td><a href="att-video-autoplay.html">autoplay</a></td>
+        <td>autoplay</td>
         <td>autoplay</td>
         <td>如果出现该属性，则视频在就绪后马上播放。</td>
     </tr>
     <tr>
-        <td><a href="att-video-controls.html">controls</a></td>
+        <td>controls</td>
         <td>controls</td>
         <td>如果出现该属性，则向用户显示控件，比如播放按钮。</td>
     </tr>
     <tr>
-        <td><a href="att-video-height.html">height</a></td>
+        <td>height</td>
         <td><i>pixels</i></td>
         <td>设置视频播放器的高度。</td>
     </tr>
     <tr>
-        <td><a href="att-video-loop.html">loop</a></td>
+        <td>loop</td>
         <td>loop</td>
         <td>如果出现该属性，则当媒介文件完成播放后再次开始播放。</td>
     </tr>
     <tr>
-        <td><a href="att-video-muted.html">muted</a></td>
+        <td>muted</td>
         <td>muted</td>
         <td>如果出现该属性，视频的音频输出为静音。</td>
     </tr>
     <tr>
-        <td valign="top"><a href="att-video-poster.html">poster</a></td>
+        <td valign="top">poster</td>
         <td valign="top"><em>URL</em></td>
         <td valign="top">规定视频正在下载时显示的图像，直到用户点击播放按钮。</td>
     </tr>
     <tr>
-        <td><a href="att-video-preload.html">preload</a></td>
+        <td>preload</td>
         <td>auto<br> metadata<br> none</td>
         <td>如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 "autoplay"，则忽略该属性。</td>
     </tr>
     <tr>
-        <td><a href="att-video-src.html">src</a></td>
+        <td>src</td>
         <td><i>URL</i></td>
         <td>要播放的视频的 URL。</td>
     </tr>
     <tr>
-        <td><a href="att-video-width.html">width</a></td>
+        <td>width</td>
         <td><i>pixels</i></td>
         <td>设置视频播放器的宽度。</td>
     </tr>
