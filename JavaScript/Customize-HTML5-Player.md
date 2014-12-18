@@ -45,6 +45,76 @@ vjs直接忽略了，不知道他们怎么弄的，直接没法支持hls的播�
 
 有了上述的方法，然后配合一些前端技巧，可以随意定制了~
 
+然后我们来实现一个切换视频流并跳转到原来位置的代码
+
+    _protected.updateVideo = function(videoUrl){
+
+		// 获取video元素
+        var video = document.getElementById('html5-video');
+        
+        // 获取当前播放位置（时间）
+        var _currentTime = getTime();
+
+		
+        changeSrc(videoUrl);
+        play();
+        seekTo(_currentTime);
+
+        function getTime(){
+            return video.currentTime.toFixed(1);
+        }
+
+        function changeSrc(url){
+            video.src = url;
+            video.load();
+        }
+
+        function seekTo(value){
+
+			// 设置延迟时间
+            var _SEEK_DELAY = 500;
+
+			// readyState 为0表示未获取到数据，延迟一秒重新判断
+            if(video.readyState == 0){
+
+                setTimeout(function(){
+                    seekTo(value);
+                },_SEEK_DELAY*2);
+                
+                // 递归调用并停止后续代码
+                return false;
+
+            }else{
+
+				// 当前视频流正常且长度大于之前的播放位置则进行跳转
+                if ((video.currentTime !== null) && (video.duration > value)) {
+                    console.log('TO SEEK');
+                    video.currentTime = value;
+                }else{
+                    console.log('Wait for data ... biu biu biu .');
+                    // 流不正常，延迟并重新判获取状态
+                    setTimeout(function(){
+                        seekTo(value);
+                    },_SEEK_DELAY);
+                    return false;
+                }
+            }
+
+        }
+
+        function play(){
+            if (video.paused) {
+                video.play();
+            }
+        }
+    };
+
+
+参考内容：
+
+* https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
+* http://www.w3cschool.cc/html/html5-video.html
+
 ** 属性和方法参考后面，摘自w3cschool. **
 
 #### HTML5 Video Intro
