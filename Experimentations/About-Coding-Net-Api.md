@@ -3,6 +3,29 @@ github上面的api挺明确，使用也很方便，但是墙内的生活，你�
 所以稍微看了一下coding的代码结构，大体上就是这个样子~
 
 	CODING_API = https://coding.net/api
+	
+睡觉之前顺便看了一下Coding客户端的源码（好久不用java...现在只会var~ T.T）
+
+	urlProject = String.format(Global.HOST + "/api/user/%s/project/%s", mJumpParam.mUser, mJumpParam.mProject);
+	
+	String urlBlob = Global.HOST + "/api/user/%s/project/%s/git/blob/master/%s";
+    //https://coding.net/api/user/bluishoul/project/AppBubbleDetail/git/blob/master%252F.bowerrc
+    
+    String urlImage = Global.HOST + "/u/%s/p/%s/git/raw/master/%s";
+    //https://coding.net/u/8206503/p/AndroidCoding/git/raw/master/app/src/main/res/drawable-xxhdpi/actionbar_item_normal.png
+    
+    private String HOST_GIT_TREE = Global.HOST + "/api/user/%s/project/%s/git/tree/master/%s";
+    //https://coding.net/api/user/8206503/project/AndroidCoding/git/tree/master
+    
+    private String HOST_GIT_TREEINFO = Global.HOST + "/api/user/%s/project/%s/git/treeinfo/master/%s";
+    
+    private String host_git_tree_url = "";
+    
+    private String host_git_treeinfo_url = "";
+    //https://coding.net/api/user/8206503/project/AndroidCoding/git/treeinfo/master
+    
+	
+和看资源加载信息看到的基本一致，只是没加上path~，顺便吐槽一下，NodeJs大法好，java写这东西是有多难！
 
 ### Format
 	
