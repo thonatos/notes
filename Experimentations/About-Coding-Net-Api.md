@@ -1,9 +1,15 @@
 github上面的api挺明确，使用也很方便，但是墙内的生活，你们懂，
 
 所以稍微看了一下coding的代码结构，大体上就是这个样子~
+	
+### Format
 
 	CODING_API = https://coding.net/api
-	
+		
+* CODING_API/user/USER/project/PROJECT/git/blob/BRANCH/PATH
+* CODING_API/user/USER/project/PROJECT/git/treeinfo/BRANCH/PATH
+
+
 睡觉之前顺便看了一下Coding客户端的源码（好久不用java...现在只会var~ T.T）
 
 	urlProject = String.format(Global.HOST + "/api/user/%s/project/%s", mJumpParam.mUser, mJumpParam.mProject);
@@ -27,10 +33,58 @@ github上面的api挺明确，使用也很方便，但是墙内的生活，你�
 	
 和看资源加载信息看到的基本一致，只是没加上path~，顺便吐槽一下，NodeJs大法好，java写这东西是有多难！
 
-### Format
-	
-* CODING_API/user/USER/project/PROJECT/git/blob/BRANCH/PATH
-* CODING_API/user/USER/project/PROJECT/git/treeinfo/BRANCH/PATH
+### NodeJS
+
+    /**
+     * Created by thonatos on 14/12/19.
+     */
+    
+    var _docRepo = require('./config').conf.docRepo;
+    var _obj = require('../utils/obj');
+    
+    var CODING = {
+        host: 'https://coding.net/api',
+        port: 443,
+        path: 'user/MTTUSER/project/MTTPROJECT/git/'
+    };
+    
+    //https://coding.net/api/user/thonatos/project/Mt.Notes.And.Documents/git/treeinfo/master/
+    
+    var GITHUB = {
+        host: 'api.github.com',
+        port: 443,
+        path: '/repos/MTTUSER/MTTPROJECT/contents/'
+    };
+    
+    
+    exports.create = {
+        docTemplate : function () {
+            return {
+                templateType : '',
+                templateName : ''
+            };
+        },
+        docRepo: function () {
+    
+            if(_docRepo.GC === "G"){
+    
+                var _g = _obj.cloneObj(GITHUB);
+    
+                _g.path = _g.path.replace(/MTTUSER/g,_docRepo.github.doc_user);
+                _g.path = _g.path.replace(/MTTPROJECT/g,_docRepo.github.doc_project);
+    
+                return _g;
+    
+            }else{
+    
+                var _c = GITHUB;
+                _c.path = _c.path.replace(/MTTUSER/g,_docRepo.coding.doc_user);
+                _c.path = _c.path.replace(/MTTPROJECT/g,_docRepo.coding.doc_project);
+    
+                return _c;
+            }
+        }
+    };
 
 ### Example
 
