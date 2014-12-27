@@ -1,4 +1,4 @@
-MT.NoteAnd.Documents && MT.NODE
+MT.NoteAnd.Documents && MT.NOTES
 
 一个在试验前后端分离方案时候顺便搭建起来的类博客站点。
 
@@ -56,6 +56,16 @@ MT.NoteAnd.Documents && MT.NODE
 	上面的内容包含了Bower.js进行常规类库，Spm.Js对js进行模块化构建，Gulp.js来对less/sass和js进行压缩合并，当然，以后有需要也可以用来对图片进行一些合并压缩处理。
 	
 #### Changelog
+
+* 2014.12.28
+
+	+ 更名为MT-NOTES
+	+ 并添加coding.net支持，对于网速不佳或者翻墙不易的状况，使用国内源速度更快。
+	+ 增加html5player脚本用于h5video视频播放，添加自定义控制栏。
+	+ 修改代码结构，移动js-spm为独立目录
+	+ 修改代码结构，移动css-gulp为独立目录
+	+ 修改代码结构，增加全局配置选项，设置运行环境
+	+ 修改代码结构，增加cdn切换选项，使用cdn加速程序
 
 * 2014.12.06 
 	
