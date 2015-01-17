@@ -63,4 +63,4 @@
 
 #### ScreenShot
 
-在我的微博上可以看到编译版本的截图，[http://weibo.com/thonatos](http://weibo.com/thonatos) 。
+在我的微博上可以看到编译版本的截图，[http://weibo.com/thonatos](http://weibo.com/thonatos)
