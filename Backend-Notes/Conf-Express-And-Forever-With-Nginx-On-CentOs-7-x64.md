@@ -1,6 +1,6 @@
-ExpressJs && ForeverJs && Nginx (CentOs 7.x)
+Express、ForeverJs、Nginx On CentOs-7.x
 
-文档站基于ExpressJs跑在Vps，使用了Nginx做前端代理，转发请求到内部网络的NodeJs服务器上，同时为了能让他自己启动，安装了ForeverJs作为守护进行，保证其发生问题后自动重启，同时考虑到机器重启后需要自启动ForeverJS，又使用了Crontab作为计划任务。
+文档站基于ExpressJs跑在Vps，使用了Nginx做前端代理，转发请求到内部网络的NodeJs服务器上，同时为了能让他自己启动，安装了ForeverJs做进程守护，保证其发生问题后自动重启，同时考虑到机器重启后需要自启动ForeverJS，又使用了Crontab作为计划任务。
 
 #### Nginx
 
