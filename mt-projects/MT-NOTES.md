@@ -47,9 +47,8 @@ MT.NoteAnd.Documents && MT.NOTES
 	
 #### Changelog
 
-	[https://github.com/MT-Libraries/MT-Notes](https://github.com/MT-Libraries/MT-Notes)
-
-	[https://coding.net/u/thonatos/p/MT-Notes/git](https://coding.net/u/thonatos/p/MT-Notes/git)
+- [https://github.com/MT-Libraries/MT-Notes](https://github.com/MT-Libraries/MT-Notes)
+- [https://coding.net/u/thonatos/p/MT-Notes/git](https://coding.net/u/thonatos/p/MT-Notes/git)
 
 #### Thanks
 
