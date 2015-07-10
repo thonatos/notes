@@ -1,3 +1,4 @@
+
 MT.NoteAnd.Documents && MT.NOTES
 
 一个在试验前后端分离方案时候顺便搭建起来的类博客站点。
@@ -38,67 +39,50 @@ MT.NoteAnd.Documents && MT.NOTES
 
 * 文档托管
 
-	Documents/Posts存放在Github，格式未Markdown或者其他（html也可以）
+	Documents/Posts存放在Github，格式为Markdown或者其他（html也可以）
 	
 * 运行环境
 
 	程序依赖于NodeJS，基于ExpressJS搭建，本质上就是一个常规的基于NodeJS的WebProject，区别在于未使用数据库进行数据的存储与读取，将Model的职责分配给后端，在这个项目中，是将该职责转交到Github Api，如果是在公司项目中，这里会交给后端的API进行处理。
 	
-* 程序功能
-
-	这个项目集成了一些列的前端构建相关的类库，说白了就是一个类Seed项目。
-	
-	* SpmJs
-	* SeaJs
-	* Gulp.js
-	* Bower.js
-	
-	上面的内容包含了Bower.js进行常规类库，Spm.Js对js进行模块化构建，Gulp.js来对less/sass和js进行压缩合并，当然，以后有需要也可以用来对图片进行一些合并压缩处理。
-	
 #### Changelog
 
-- 2015.05.12
+	[https://github.com/MT-Libraries/MT-Notes](https://github.com/MT-Libraries/MT-Notes)
 
-    - spm@3.4+不再支持cmd构建方式，请使用npm intall -g spm-sea并切换js-spm目录执行spm-sea
-    - 增加私人电台（感谢@moon）
-    - 更新版本号为0.0.4
-    - 更新Fm代码
-    
-- 2015.04.30
-    - 更名Demo为Labs
-    - 待添加FM电台功能
-    
-- 2015.02.09
+	[https://coding.net/u/thonatos/p/MT-Notes/git](https://coding.net/u/thonatos/p/MT-Notes/git)
 
-	- 更新版本号为0.0.3
-	- 更新node模块（gulp，cookie等）
-	- 更新配置选项，统一放入conf_app进行配置信息设置
-	- 更新代码结构，按照模块组织Controller与Router
-	- 添加Github的验证功能，查询限制更改为5000/hour
-	- 添加远程下载功能，方便从服务器Download文件
-	- 添加upyun服务支持，并设置远程下载自动上传又拍云（beta）
+#### Thanks
 
-- 2015.01.16
+* SeaJS     模块化开发
+* GulpJS    流式构建
+* Github    文档API服务
+* MongoDB   数据库
+* AngularJS MVVM前端框架
+* ExpressJS 网站核心程序
+* PassportJS 网站认证模块
 
-	- 权限设置问题，邮箱与配置邮箱相同时role为管理员，其他为普通用户。
-	- 登录默认进入资料页面（样式内容还没定，回头去纠缠设计师。）
-	- 加了一个低版本浏览器提示的东东，暂时还没添加到所有页面。
-	
-* 2014.12.28
+感谢用到类库作者的无私奉献以及Github。
 
-	+ 更名为MT-NOTES
-	+ 并添加coding.net支持，对于网速不佳或者翻墙不易的状况，使用国内源速度更快。
-	+ 增加html5player脚本用于h5video视频播放，添加自定义控制栏。
-	+ 修改代码结构，移动js-spm为独立目录
-	+ 修改代码结构，移动css-gulp为独立目录
-	+ 修改代码结构，增加全局配置选项，设置运行环境
-	+ 修改代码结构，增加cdn切换选项，使用cdn加速程序
+#### License
 
-* 2014.12.06 
-	
-	v0.0.1 基于预期的可稳定运行版本
-	
-	+ bower包管理
-	+ less文件的编译与压缩
-	+ 模块化js的编译与压缩
-	+ 获取文档列表与文档内容 （/doc/:category/:ducument）
+The MIT License (MIT)
+
+Copyright (c) 2014 [@Thonatos.Yang](http://github.com/thonatos)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
