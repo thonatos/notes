@@ -18,7 +18,7 @@ some ffmpeg commands .
 
 #### Send rtsp
 
-    ffmpeg -i input.mp4 -c copy -f flv rtmp://192.168.1.122/hls/test
+    ffmpeg -re -i input.mp4 -c copy -f flv rtmp://192.168.3.8/hls/test
     ffplay http://192.168.1.122:8080/hls/test.m3u8
 
 #### convert mp4 to m3u8
