@@ -1,3 +1,8 @@
+ 
+> 已经有人总结了更详细的文档(⊙o⊙)哦~
+> 
+> [http://api-doc.coding.io/](http://api-doc.coding.io/)
+
 github上面的api挺明确，使用也很方便，但是墙内的生活，你们懂，
 
 所以稍微看了一下coding的代码结构，大体上就是这个样子~
@@ -33,7 +38,10 @@ github上面的api挺明确，使用也很方便，但是墙内的生活，你�
 	
 和看资源加载信息看到的基本一致，只是没加上path~，顺便吐槽一下，NodeJs大法好，java写这东西是有多难！
 
+
 ### NodeJS
+
+这里的不用看了~~，而且代码写的也吐了，已经不用了T.T
 
     /**
      * Created by thonatos on 14/12/19.
