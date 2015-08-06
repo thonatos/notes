@@ -23,9 +23,11 @@
     ## 向量相乘
     ax*ax + ay*ay + az*az = 1; (2)
     ## 由(1)(2)可得下式 
+    cos(angle/2)2 + (ax*ax+ ay*ay + az*az) * sin(angle/2)2 = 1;
     cos(angle/2)2 + ax*ax * sin(angle/2)2 + ay*ay * sin(angle/2)2+ az*az * sin(angle/2)2 = 1
     ## 于是可以得到
     qw2 + qx2 + qy2 +qz2 =1
+    ## 则：
     qw = cos(angle/2)
     qx = ax * sin(angle/2)
     qy = ay * sin(angle/2)
