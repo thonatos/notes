@@ -9,8 +9,6 @@ HTML5 Video & Control
 * Html5Media
 * MediaElements
 
-vjs直接忽略了，不知道他们怎么弄的，直接没法支持hls的播放，直接忽略吧~
-
 #### Do something
 
 	var h5m = document.getElementById('html5-video');

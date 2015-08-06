@@ -94,3 +94,14 @@ Crontab配置：
 这样貌似就成了，具体需要还是参考文档吧。
 
 [PM2 - ADVANCED_README](https://github.com/Unitech/PM2/blob/development/ADVANCED_README.md)
+
+今天再次测试的时候发现，pm2的startup并不靠谱，所以还是需要自己做一些东西，pm2启动以后基本是没什么问题的，但是自动启动的时候，需要一些环境变量什么的设置，因为我们是使用的nvm安装的，所以在启动脚本那边就这么写吧~
+
+    #!/bin/bash
+    # Active Nvm
+    . ~/.nvm/nvm.sh
+    # Export PATH & NODE_PATH
+    # export PATH=$PATH:/home/{username}/.nvm/versions/node/v0.12.7
+    # export NODE_PATH=$NODE_PATH:/home/{username}/.nvm/versions/node/v0.12.7/lib/node_modules
+    # Active PM2
+    cd /home/{username}/workspace/{project} && npm run pm2sp
