@@ -33,6 +33,11 @@ some ffmpeg commands .
 
     ffmpeg -i v2048x1024.mp4 -c:v libx264 -c:a aac -strict -2 -hls_list_size 0 -hls_time 2 -s 1920x1080 -r 30 -b:v 850k -f hls ./1920x1080/m3u8/demo.m3u8
 
+    ffmpeg -i scene2.mov -c:v libx264 -c:a aac -strict -2 -hls_list_size 0 -hls_time 2 -s 1280x720 -r 30 -b:v 3M -movflags faststart scene2@1280x720.mp4
+
+    -movflags faststart 
+    ## 可在视频在未加载完之前播放
+
     -hls_time n
     ## 设置每片的长度，默认值为2。单位为秒
     -hls_list_size n
