@@ -41,8 +41,12 @@ ffmpeg -i v2048x1024.mp4 -c:v libx264 -c:a aac -strict -2 -hls_list_size 0 -hls_
 一些其他奇葩的应用。
 
 ```
-ffmpeg -i video.avi -s 320x540 -r 10 out%02d.gif
-gifsicle --delay=10 --loop *.gif > anim.gif
+# 直接转换
+ffmpeg -i video.avi -s 320x540 -r 10 out.gif
+
+# 另一种方法
+ffmpeg -i video.avi -t 1 out%01d.gif
+gifsicle --delay=10 --loop out*.gif > anim.gif
 ```
 
 ## More 
