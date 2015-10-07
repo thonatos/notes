@@ -36,6 +36,15 @@ ffplay http://192.168.1.122:8080/hls/test.m3u8
 ffmpeg -i v2048x1024.mp4 -c:v libx264 -c:a aac -strict -2 -hls_list_size 0 -hls_time 2 -f hls output.m3u8
 ```
 
+## other
+
+一些其他奇葩的应用。
+
+```
+ffmpeg -i video.avi -s 320x540 -r 10 out%02d.gif
+gifsicle --delay=10 --loop *.gif > anim.gif
+```
+
 ## More 
 
 组合命令，可以更方便的处理一些视频。
