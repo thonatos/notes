@@ -79,3 +79,23 @@ ffmpeg -i scene2.mov -c:v libx264 -c:a aac -strict -2 -hls_list_size 0 -hls_time
 ffmpeg -i H5小星球动态-有logo.mov -an -vcodec libx264 -pix_fmt yuv420p H5.mp4
 # Mac转换的视频转码异常的处理。
  ```
+ 
+ 
+ #### concat demuxer
+[Concatenate](https://trac.ffmpeg.org/wiki/Concatenate)
+
+ ```
+ ## create file list.txt
+ 
+ # this is a comment
+file '/path/to/file1'
+file '/path/to/file2'
+file '/path/to/file3'
+
+
+## ffmpeg 
+ffmpeg -f concat -safe 0 -i list.txt -c copy output
+
+ffmpeg -i "concat:input1.mpg|input2.mpg|input3.mpg" -c copy output.mpg
+
+ ```
