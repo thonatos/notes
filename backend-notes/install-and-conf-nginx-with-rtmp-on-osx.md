@@ -1,9 +1,10 @@
 
+
 conf nginx with rtmp module
 
 #### Command
 
-	brew tap homebrew/nginx
+	brew tap denji/nginx
 	brew options nginx-full
 	brew info nginx-full
 	brew install nginx-full --with-rtmp-module --with-debug
